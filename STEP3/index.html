@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Tax</title>
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+    <link rel="stylesheet" href="./css/main.css">  
+    <script src="grafico.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+</head>
+<body>
+    <div class="nav-bar">
+        <div class="logo">
+            <a href="https://alltaxplatform.com/">
+                <img src="./img/logo.png" alt="Logo All Tax" title="Acesse nosso site" height="25px">
+            </a>
+        </div>
+        <div class="navbar-title">
+            <h1>Sales Report by Gabriel Toscano</h1>
+        </div>
+        <div class="contatos">
+            <a href="https://github.com/gtbo">
+                <img src="./img/git.png" alt="github" title="Acesse meu github" height="30px">
+            </a>
+            <a href="https://www.linkedin.com/in/gtbo/">
+                <img src="./img/linkedin.png" alt="linkedin" title="Acesse meu linkedin" height="30px">
+            </a>
+            <a href="./arquivos/Curriculo Gabriel Toscano.pdf" download="Curriculo.png">
+                <img src="./img/Curriculo.png" alt="Curriculo" title="Baixe meu curriculo" height="30px">
+            </a>
+        </div>  
+    </div>
+    <div class="seletor">
+        <div class="seletores">
+            <label for="categoria">Categoria</label>
+            <select name="Categoria" id="categoria" onchange="seletor()">
+                <option value="0">Comida</option>
+                <option value="1">Roupa</option>
+                <option value="2">Produtos</option>                
+              </select>
+        </div>
+        <div class="seletores">
+            <label for="tipo">Tipo</label>
+            <select name="Tipo" id="tipo" onchange="seletor()">
+                <option value="0" id="option_2_1"></option>
+                <option value="1" id="option_2_2"></option>
+                <option value="2" id="option_2_3"></option>                
+              </select>
+        </div>
+        <div class="seletores">
+            <label for="Produto">Produto</label>
+            <select name="Produto" id="produto" onchange="seletor()" title="Produto">
+                <option value="0" id="option_3_1"></option>
+                <option value="1" id="option_3_2"></option>
+                <option value="2" id="option_3_3"></option>                
+              </select>
+        </div>
+    </div>
+    <div class="chart-container" >
+        <canvas class="grafico" id="sales"></canvas>
+    </div>
+
+    <script>seletor()</script>
+    
+    
+</body>
+</html>
